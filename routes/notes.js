@@ -8,7 +8,10 @@ notes.get('/', (req, res) => {
 	})
 })
 
-
+notes.post('/', (req, res) => {
+	readAndAppend(req.body, './db/db.json')
+	res.json('Successfully saved note')
+})
 
 
 
