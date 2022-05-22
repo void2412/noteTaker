@@ -11,7 +11,7 @@ notes.get('/', (req, res) => {
 notes.post('/', (req, res) => {
 	const data = req.body
 	const payload  = {
-		id: uuidv4(),
+		id: generateID(),
 		data
 	}
 	readAndAppend(payload, './db/db.json')
