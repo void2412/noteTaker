@@ -1,11 +1,11 @@
-const {readFromFile} = require('./fsUtils')
+const fs = require('fs');
 const crypto = require('crypto').webcrypto
 const path = require('path')
 
 // generate 32-bit non-negative integer, maximum value is 4294967295
-function generateID(){	 
-	readFromFile(path.join(__dirname, '../db/db.json')).then((data)=>{
-		let idArray = []
+const generateId =  () => {	 
+	var data = fs.readFileSync(path.join(__dirname, '../db/db.json'))
+	let idArray = []
 		if(data.length > 0){
 			jsonData = JSON.parse(data)
 			if (jsonData.length > 0){
@@ -20,8 +20,8 @@ function generateID(){
 		while (idArray.includes(randomID[0])){
 			crypto.getRandomValues(randomID)
 		}
+		
 		return randomID[0]
-	})
 }
 
-module.exports = generateID
+module.exports = generateId
