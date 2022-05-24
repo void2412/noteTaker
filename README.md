@@ -22,7 +22,7 @@
   npm i
 
   ## Usage
-  
+  [How to start and use the note taker server](https://www.youtube.com/watch?v=e6-ZJTuxOyE&ab_channel=ChiHieuNguyen)
 
   ## License
 ```
@@ -33,7 +33,7 @@ This project is licensed under MIT license.
   Email me.
 
   ## Tests
-  Use Insomia to test server response.
+  Use [Insomia](https://insomnia.rest/download) to test server response.
 
   ## Questions
   
